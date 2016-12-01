@@ -1,4 +1,0 @@
-.main_text ul:not([class]) li:before{
-    content: "¤ ";
-    color: #df001b;
-}
