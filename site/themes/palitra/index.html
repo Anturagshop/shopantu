@@ -57,10 +57,12 @@
 {/if}
 
 <!-- Кнопка на верх -->
+{literal}
 <script type="text/javascript">$(document).ready(function(){
 $(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
 $('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
 });</script>
+{/literal}
 <!-- конец -->
 
 <body id="{$wa_app}" class="{$class}"{if !empty($theme_settings.copy_protect)} oncontextmenu="return false;"{/if}>
@@ -159,6 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/template/js/owl/sly.min.js"></script>
     <script src="/template/js/main.js"></script>
 	<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">наверх</span></div>
+	<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but"></span></div>
 </body>
 
 </html>
