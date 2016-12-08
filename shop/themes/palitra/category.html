@@ -12,6 +12,7 @@
 {$list_type = 'thumbs'}
 {if waRequest::cookie('view_select') == 'table'}{$list_type = 'table'}{/if}
 {if isset($category)}{$_cid = $category.id}{else}{$_cid = null}{/if}
+<!-- Изменения для github -->
 <div class="row">
     <div class="topBar-catalog clearfix">
         <div class="col-md-3">
