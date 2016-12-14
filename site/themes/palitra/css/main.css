@@ -2,6 +2,20 @@
 .set-block h3{  color:#DF001B; }
 .set-block p{ }
 .set-block span{ color:#DF001B; }
+/* Николай */
+.colmenu {
+position: absolute;
+left: 0;
+right: 0;
+top: 48px;
+z-index: 999;
+background: #f2f2f2; width: 232px;
+margin-left: 15px;}
+
+.colmenu .navbar-collapse > ul > li { margin-bottom: 0px !important;
+padding: 4px 15px !important;}
+.colmenu .navbar-collapse > ul > li .hover_side_menu a { padding: 5px 0 !important;} 
+/* end Николай 1 main.css */
 
 
 /*.corner {
@@ -869,13 +883,21 @@ aside .side_news .more:hover {
     color: #e00320;
     font-weight: bold;
 }
-.catalog{
+/* Николай */
+.catalog {
+    font-family: Arial !important;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    border-radius: 10px;
+    float: left;} 	
+/*.catalog{
 
     background-color: #f2f2f2;
     padding-top: 10px;
     border-radius: 10px;
     float: left;
-}
+}*/
+/*end Николай */
 .catalog .navbar-header{
     padding-bottom: 0;
 }

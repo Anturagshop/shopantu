@@ -204,12 +204,12 @@
 {include file="recent_products.html" inline}
 <script>
     $('.open_menu').click(function(){
-        if($('#navbar-catalog').hasClass('show')){
-            $('#navbar-catalog').removeClass('show');
-            $('#navbar-catalog').addClass('hide');
+        if($('#navbar-aside').hasClass('show')){
+            $('#navbar-aside').removeClass('show');
+            $('#navbar-aside').addClass('hide');
         }else{
-            $('#navbar-catalog').removeClass('hide');
-            $('#navbar-catalog').addClass('show');
+            $('#navbar-aside').removeClass('hide');
+            $('#navbar-aside').addClass('show');
         }
     })
 </script>
@@ -220,4 +220,3 @@ $(function () {
         localStorage.setItem('breadcrumbs', breadcrumbs + ' <a href="{$wa->shop->categoryUrl($category)}">{$category.name|escape}</a> <span class="rarr">&rarr;</span>');
     }
 });
-</script>
