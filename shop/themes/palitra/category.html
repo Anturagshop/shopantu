@@ -3,6 +3,7 @@
 		try { rrApi.categoryView({$category.id}); } catch(e) {}
 	})
 </script>
+{$categories = $wa->shop->categories(0, null, true)}
 <div style="display: none;">
     {if $category.parent_id == 687 && $category.id == 748 || $category.id == 746 || $category.id == 744 || $category.id == 747}
         <!--hspan-->{$category.name|escape}<!--/hspan-->
@@ -12,6 +13,7 @@
 {$list_type = 'thumbs'}
 {if waRequest::cookie('view_select') == 'table'}{$list_type = 'table'}{/if}
 {if isset($category)}{$_cid = $category.id}{else}{$_cid = null}{/if}
+<!-- Изменения для github -->
 <div class="row">
     <div class="topBar-catalog clearfix">
         <div class="col-md-3">
@@ -28,7 +30,15 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-    
+    <aside id="navbar-aside" class=" hide  ">
+         <div class="  1 colmenu">
+		 	 {if count($categories)}
+                 
+                     {wa_print_tree tree=$categories unfolded=true class="category-tree" collapsible_class="parent_tree" elem ='<a href=":url" title=":name">:name</a>'}
+               
+             {/if}
+         </div>
+	</aside>
             {/if}
             </div>
            
@@ -203,12 +213,12 @@
 {include file="recent_products.html" inline}
 <script>
     $('.open_menu').click(function(){
-        if($('#navbar-catalog').hasClass('show')){
-            $('#navbar-catalog').removeClass('show');
-            $('#navbar-catalog').addClass('hide');
+        if($('#navbar-aside').hasClass('show')){
+            $('#navbar-aside').removeClass('show');
+            $('#navbar-aside').addClass('hide');
         }else{
-            $('#navbar-catalog').removeClass('hide');
-            $('#navbar-catalog').addClass('show');
+            $('#navbar-aside').removeClass('hide');
+            $('#navbar-aside').addClass('show');
         }
     })
 </script>
